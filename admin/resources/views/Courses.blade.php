@@ -8,7 +8,7 @@
 <div class="row">
 <div class="col-md-12 p-5">
 <button id="addNewCourseBtnId" class="btn my-3 btn-sm btn-danger">Add New </button>
-<table id="" class="table table-striped table-bordered" cellspacing="0" width="100%">
+<table id="courseDataTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
   <thead>
     <tr>
 
@@ -120,7 +120,7 @@
       </div>
       <div class="modal-body  text-center">
 
-      <h5 id="courseEditId" class="mt-4">  </h5>
+      <h5 id="courseEditId" class="mt-4 d-none">  </h5>
 
        <div id="courseEditForm" class="container d-none">
 
@@ -167,7 +167,7 @@
     <div class="modal-content">
       <div class="modal-body p-3 text-center">
         <h5 class="mt-4">Do You Want To Delete?</h5>
-        <h5 id="CourseDeleteId" class="mt-4">   </h5>
+        <h5 id="CourseDeleteId" class="mt-4 d-none">   </h5>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">No</button>

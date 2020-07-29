@@ -15,7 +15,7 @@ function getServicesData() {
 
         $('#mainDiv').removeClass('d-none');
         $('#loaderDiv').addClass('d-none');
-
+        $('#serviceDataTable').DataTable().destroy();
         $('#service_table').empty();
 
         var jsonData = response.data;
@@ -46,7 +46,8 @@ function getServicesData() {
         $('#editModal').modal('show');
 
     })
-
+    $('#serviceDataTable').DataTable({"order":false});
+    $('.dataTables_length').addClass('bs-select');
 
 }else {
 
@@ -277,6 +278,7 @@ function getCoursesData() {
           if (response.status == 200) {
               $('#mainDivCourse').removeClass('d-none');
               $('#loaderDivCourse').addClass('d-none');
+              $('#courseDataTable').DataTable().destroy();
               $('#course_table').empty();
               var jsonData = response.data;
               $.each(jsonData, function(i, item) {
@@ -310,6 +312,9 @@ function getCoursesData() {
                  $('#courseEditId').html(id);
                 $('#updateCourseModal').modal('show');
              })
+
+             $('#courseDataTable').DataTable({"order":false});
+             $('.dataTables_length').addClass('bs-select');
 
           } else {
 
