@@ -13,6 +13,9 @@
 	<link href="{{asset('css/responsive.css')}}" rel="stylesheet" >
 	<link href="{{asset('css/datatables.min.css')}}" rel="stylesheet" >
 	<link href="{{asset('css/datatables-select.min.css')}}" rel="stylesheet" >
+
+
+
 </head>
 <body class="fix-header fix-sidebar">
 
@@ -42,5 +45,15 @@
 <script type="text/javascript" src="{{asset('js/datatables-select.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/axios.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/custom.js')}}"></script>
+
+
+
+
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+@yield('script')
+
 </body>
 </html>

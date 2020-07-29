@@ -13,6 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('Home');
-});
+Route::get('/', 'HomeController@HomeIndex');
+Route::get('/visitor', 'VisitorController@VisitorIndex');
+
+
+//Admin Pannel Service Management
+Route::get('/service', 'ServicesController@ServicesIndex');
+Route::get('/getServicesData', 'ServicesController@servicesData');
+Route::post('/ServiceDelete', 'ServicesController@serviceDelete');
+Route::post('/ServiceDetails', 'ServicesController@getServiceDetails');
+Route::post('/ServiceUpdate', 'ServicesController@serviceUpdate');
+Route::post('/ServiceAdd', 'ServicesController@ServiceAdd');
+
+
+// Admin Pannel Courses Management
+
+Route::get('/courses', 'CoursesController@CoursesIndex');
+Route::get('/getCoursesData', 'CoursesController@getCoursesData');
+Route::post('/CoursesDelete', 'CoursesController@CoursesDelete');
+Route::post('/CoursesDetails', 'CoursesController@getCoursesDetails');
+Route::post('/CoursesUpdate', 'CoursesController@CoursesUpdate');
+Route::post('/CoursesAdd', 'CoursesController@CoursesAdd');
+

@@ -18,8 +18,10 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <li class="nav-devider mt-0" style="margin-bottom: 5px"></li>
-                        <li> <a href="" ><span> <i class="fas fa-home"></i> </span><span class="hide-menu">Menu 1</span></a></li>
-                        <li> <a href="" ><span> <i class="fas fa-plus"></i> </span><span class="hide-menu">Menu 1</span></a></li>
+                        <li> <a href="{{url('/')}}" ><span> <i class="fas fa-home"></i> </span><span class="hide-menu">Menu 1</span></a></li>
+                        <li> <a href="{{url('/visitor')}}" ><span> <i class="fas fa-users"></i> </span><span class="hide-menu">Visitor</span></a></li>
+                        <li> <a href="{{url('/service')}}" ><span> <i class="fas fa-globe"></i> </span><span class="hide-menu">Services</span></a></li>
+                        <li> <a href="{{url('/courses')}}" ><span> <i class="fas fa-book-open"></i> </span><span class="hide-menu">Courses</span></a></li>
                     </ul>
                 </nav>
             </div>

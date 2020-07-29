@@ -21,6 +21,7 @@
 
 @include('Layout.menu')
 
+
 @yield('content')
 
 
