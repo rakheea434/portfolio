@@ -32,7 +32,7 @@ class CoursesController extends Controller {
 
     }
 
-    function coursesUpdate(Request $Req) {
+    function CoursesUpdate(Request $req) {
         $id = $req->input('id');
         $course_name = $req->input('course_name');
         $course_des = $req->input('course_des');
