@@ -302,6 +302,14 @@ function getCoursesData() {
                 $('#CourseDeleteId').html(id);
                 $('#deleteCourseModal').modal('show');
               })
+              //Update modal Open
+
+              $('.courseEditBtn').click(function(){
+                 var id= $(this).data('id');
+                CourseUpdateDetails(id);
+                 $('#courseEditId').html(id);
+                $('#updateCourseModal').modal('show');
+             })
 
           } else {
 
@@ -318,7 +326,7 @@ function getCoursesData() {
 
 }
 
-// Course Add Moda
+// Course Add Modal
 $('#addNewCourseBtnId').click(function(){
 	$('#addCourseModal').modal('show');
 });
@@ -410,7 +418,36 @@ function CourseAdd(CourseName,CourseDes,CourseFee,CourseEnroll,CourseClass,Cours
 
 
 
-
+        
+        // Course Update
+        function CourseUpdateDetails(detailsID){
+          axios.post('/CoursesDetails', {
+            id: detailsID
+          })
+         .then(function(response) {
+           if(response.status==200){
+                $('#courseEditForm').removeClass('d-none');
+                $('#courseEditLoader').addClass('d-none');    
+                var jsonData = response.data;
+                $('#CourseNameUpdateId').val(jsonData[0].course_name);
+                $('#CourseDesUpdateId').val(jsonData[0].course_des);
+                $('#CourseFeeUpdateId').val(jsonData[0].course_fee);
+                $('#CourseEnrollUpdateId').val(jsonData[0].course_totalenroll);
+                $('#CourseClassUpdateId').val(jsonData[0].course_totalclass);
+                $('#CourseLinkUpdateId').val(jsonData[0].course_link);
+                $('#CourseImgUpdateId').val(jsonData[0].course_img);
+            }
+          
+          else{
+              $('#courseEditLoader').addClass('d-none');
+              $('#courseEditWrong').removeClass('d-none');
+            }
+          })
+          .catch(function(error) {
+              $('#courseEditLoader').addClass('d-none');
+              $('#courseEditWrong').removeClass('d-none');
+        });
+}
 
 
 
