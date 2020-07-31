@@ -226,6 +226,12 @@ function getServiceDelete(deleteID) {
     });
 }
 
+
+
+
+
+
+
 //Each Service Update Details
 
 function ServiceUpdateDetails(detailID) {

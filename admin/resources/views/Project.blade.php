@@ -106,7 +106,7 @@
 
 
           <div id="projectAddForm" class=" w-100">
-          <h6 class="mb-4">Add New Project</h6>  
+          <h6 class="mb-4">Add New Project</h6>
           <input id="projectNameAddID" type="text" id="" class="form-control mb-4" placeholder="Project Name">
           <input id="projectDesAddID" type="text" id="" class="form-control mb-4" placeholder="Project Description">
           <input id="projectImgAddID" type="text" id="" class="form-control mb-4" placeholder="Project Image Link">
@@ -134,5 +134,8 @@
 @section('script')
 <script type="text/javascript">
 getProjectData();
+
+
+
 </script>
 @endsection
